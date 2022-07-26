@@ -1,0 +1,25 @@
+{% extends "ProyectoWeb/base.html" %}
+
+{% block title %}Viajes{% endblock %}
+
+{% block body %}
+    {% for turis in turismos %}
+    <section id="scroll">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="img-fluid rounded-circle" style="height:200," style="width:200" src="{{turis.imagen.url}}" alt="..." /></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4 " style="color:rebeccapurple">{{turis.titulo}}</h2>
+                        <p >{{turis.contenido}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {%endfor%}
+
+{% endblock %}

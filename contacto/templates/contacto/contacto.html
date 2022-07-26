@@ -1,0 +1,27 @@
+{% extends "ProyectoWeb/base.html" %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block body %}
+
+<div class ="form">
+         
+    {% if "valido" in request.GET %}
+         <p style ="color:rgb(45, 89, 139); font-size:40px;text-align:center">Informacion Enviada</p>
+
+    {% endif %}
+
+
+    <form action="#" method="POST" style="text-align:center;">
+         {%csrf_token%}
+         <table style = "color:rgb(47, 115, 123);margin:20px auto;font-size:20;border-radius:20px;background-color: #1a1a30;" >{{miFormulario.as_table}}</table>
+         <input type="submit" class="button" value="Enviar" > 
+      
+    </form> 
+       
+   
+
+</div>
+
+
+{% endblock %}
